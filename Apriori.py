@@ -19,15 +19,11 @@ def run_apriori(transactions, min_support=0.5, min_confidence=0.5):
 
 
 if __name__ == '__main__':
-    # 替换为你的 CSV 文件路径
-    filename = 'subset_data.csv'
-
+    filename = 'dataset.csv'
     # 加载数据集
     transactions = load_data(filename)
-
     # 执行 Apriori 算法
     rules = run_apriori(transactions)
-
     # 打印结果
     for item in rules:
         print(item)
